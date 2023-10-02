@@ -1,0 +1,19 @@
+# Ignore files related to PHP
+*.log
+*.zip
+/vendor/
+composer.lock
+
+# Ignore files related to MySQL
+*.sql
+
+# Ignore files related to MongoDB
+*.bson
+*.dump
+
+# Ignore files related to Windows
+Thumbs.db
+Desktop.ini
+
+# Ignore files related to Visual Studio Code
+.vscode/
