@@ -17,3 +17,6 @@ Desktop.ini
 
 # Ignore files related to Visual Studio Code
 .vscode/
+
+# Ignore the .env file
+.env
