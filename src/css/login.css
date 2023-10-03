@@ -1,0 +1,115 @@
+
+/* Login */
+form{
+    width: 55%;
+}
+
+form > h1{
+    font-style: normal;
+    font-weight: 700;
+/*     font-size: 2.931rem;
+    line-height: 4.375rem; */
+    text-align: center;
+    margin-bottom: 2.688rem;
+
+    font-size: 46.8947px;
+    line-height: 70px;
+    color: #262840;
+}
+
+h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+/*     font-size: 18.7143px; */
+    font-size: 2vh;
+    line-height: 30px;
+
+    text-align: center;
+}
+
+button{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fba772;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+button:hover{
+    background: #FF8435;
+}
+
+label > input{
+    margin-right: 10px;
+}
+
+label{
+    padding-left: 2px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #262840;
+}
+
+body{
+    display: flex;
+}
+
+#login-div{
+    width: 30%;
+}
+
+
+#login-div div > img{
+    padding-top: 35px;
+    padding-left: 35px;
+    width: 218px;
+
+}
+
+#form-div{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-form{
+    border:none;
+    border-bottom: 1px solid #262840;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#submit-forgot{
+    align-self: flex-start;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #262840;
+}
+
+#login-img{
+    background-image: url(../images/log_in_foto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 70%;
+}
+
+.input-form:focus-visible{
+    outline: none;
+}
+
+#powered{
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}

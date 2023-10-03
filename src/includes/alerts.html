@@ -1,0 +1,56 @@
+<div id="title">
+    <div class="d-flex flex-column">
+        <span class="fn-600 fs-30 fh-38">Alerts</span>
+        <h9 id="active-subtitle" class="fn-500 fh-38 fs-30" style="color: #BEBFC6;">Active alerts</h9>
+        <h9 id="pending-subtitle" class="fn-500 fh-38 fs-30" style="color: #BEBFC6;">Pending alerts</h9>
+        <h9 id="solved-subtitle" class="fn-500 fh-38 fs-30" style="color: #BEBFC6;">Solved alerts</h9>
+    </div>
+    <div>
+        <div class="dd">
+            <button id="wfarm-btn" class="dd-btn" value="999">Wind farm<i class="fa-solid fa-angle-right"></i></button>
+            <div id="wfarm-content" class="dd-content d-none"></div>
+        </div>
+        <div class="dd">
+            <button id="date-btn" class="dd-btn" value="999">Date<i class="fa-solid fa-angle-right"></i></button>
+            <div id="date-content" class="dd-content d-none"></div>
+        </div>
+        <input id="alert-date-calendar" type="date" class="d-none">
+        <div class="dd">
+            <button id="wtg-btn" class="dd-btn" value="999">WTG number<i class="fa-solid fa-angle-right"></i></button>
+            <div id="wtg-content" class="dd-content d-none"></div>
+        </div>
+        <div class="dd">
+            <button id="model-btn" class="dd-btn" value="999">Turbine model<i class="fa-solid fa-angle-right"></i></button>
+            <div id="model-content" class="dd-content d-none"></div>
+        </div>
+        <div class="dd">
+            <button id="type-btn" class="dd-btn" value="999">Alert type<i class="fa-solid fa-angle-right"></i></button>
+            <div id="type-content" class="dd-content d-none"></div>
+        </div>
+    </div>
+</div>
+<div class="table-content">
+    <table>
+        <thead>
+            <tr>
+                <th><input id="check-all-alerts" type="checkbox"></th>
+                <th>Code</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Wind farm</th>
+                <th>Type</th>
+                <th>WTG number</th>
+                <th>WTG model</th>
+                <th>Component</th>
+                <th>Value</th>
+                <th><i id = "menug" class="fa-solid fa-ellipsis-vertical"></i></th>
+            </tr>
+        </thead>
+        <tbody id="alerts-body">
+            <tr><td colspan='11'><img src='images/loader_final.gif'></td></tr>
+        </tbody>
+    </table>
+    <div class="tfoot">
+        <p id="footer-results"></p><p id="footer-new"></p>
+    </div>
+</div>

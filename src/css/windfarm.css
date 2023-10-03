@@ -1,0 +1,546 @@
+/* REPAIRS */
+#btn-repairs{
+    background: #F5F3F3 url(../images/icons/spanner.png) no-repeat;
+    border-radius: 11.4114px;
+    text-align: center;
+    appearance: none;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22.5px;
+    padding: 9px;
+    background-origin: content-box;
+    background-position-y: center;
+    text-indent:14px;
+    width: 10rem;
+    height: 2.5rem;
+    margin-top: 15px;
+}
+
+#btn-repairs:hover{
+    background-color: #E0E2F4;
+}
+
+#btn-repairs:focus-visible{
+    outline: none;
+}
+
+#repairs{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.425);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#repairs > .card > ul > ul > p:first-child{
+    font-weight: 700;
+}
+
+#repairs > .card{
+    height: 50vh;
+    padding: 20px;
+}
+
+#repairs-wtgs{
+    width: 45vw;
+    height: 39vh !important;
+    background: #F0F0F0;
+}
+
+
+#repairs-wtgs > p{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#repairs-components{
+    width: 69vw;
+    position: absolute;
+    display: none;
+    overflow: overlay;
+}
+
+#repairs-components > #lessYearDateConfirmation{
+    width: 30vw;
+    height: 20vh;
+    background-color: #F0F0F0;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+    font-size: 0.8vw;
+}
+
+#repairs-components > #lessYearDateConfirmation > div{
+    display: flex;
+    gap: 50px;
+}
+
+#repairs-components > #lessYearDateConfirmation > div > button{
+    background: #FBA772;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    width: 60px;
+    height: 25px;
+}
+
+#repairs-components #wtg_number{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#repairs-wtgs > ul{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+#repairs-components > ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+#repairs-components > ul > ul{
+    width: 20%;
+}
+
+#repairs-components > ul > ul > li > div > div.date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+#repairs-components > ul > ul > li > div .edit_date > button{
+    width: 60px;
+    margin-left: 0;
+}
+
+#repairs-components > ul > ul > li > div > div > #icons{
+    display: flex;
+    gap: 10px;
+    float: right;
+    margin-right: 40%;
+}
+
+#repairs-components > ul > ul > li > div{
+    background-color: #F0F0F0;
+    border-radius: 5px;
+}
+
+#repairs-components > ul > ul > li > div button{
+    margin-left: 5px;
+    background: #FBA772;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    height: 25px;
+    width: 40px;
+}
+
+#repairs li:hover{
+    color: #777AA4;
+    cursor: default;
+}
+
+#repairs li > p:first-child:hover{
+    color: #777AA4;
+    cursor: default;
+}
+
+#repairs-close-btn{
+    float: right;
+}
+
+#repairs-components-close-btn{
+    float: right;
+}
+
+/* #btn-repairs{
+    width: 5rem;
+    height: 2.5rem;
+    margin-top: 15px;
+} */
+
+#title{
+    display: flex;
+    gap: 2.91vw !important;
+}
+
+/* Home */
+#main-container > #second-container > #title > #wf{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2.7rem;
+    font-size: 2.19vw;
+    gap: 56px;
+    gap: 2.91vw;
+/*     font-size: 42.6281px; */
+}
+
+#wf-info > p{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(38, 40, 64, 0.6) !important;
+}
+
+#main-container > #second-container > #title >img{
+    width: 5rem;
+    height: 2.5rem;
+}
+
+#main-container > #second-container > #title > #periods{
+    width: 5rem;
+    height: 2.5rem;
+    margin-top: 15px;
+}
+
+#nav > ul{
+    margin-left: 5px;
+}
+
+#nav > ul li{
+    display: inline-block;
+    width: 8rem;
+    height: 2rem;
+    text-align: center;
+    padding: 5px;
+
+    border-radius: 10px 10px 0 0;
+}
+
+#content{
+    margin-top: 1vh;
+    display: grid;
+    grid-template-areas: "map kpi"
+                         "wtgs wtgs";
+    grid-template-columns: 1fr 1fr;
+    column-gap: 27px;
+    column-gap: 1.41vw;
+    row-gap: 87px;
+}
+
+#performance_map{
+    display: none;
+}
+
+.map-card{
+    grid-area: map;
+    width: 39.9vw;
+}
+
+.map-card > img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+#map-nav > ul > li:hover{
+    color: #777AA4;
+    cursor: default;
+}
+
+
+#kpi{
+    font-style: normal;
+    font-weight: 500;
+/*     font-size: 17px; */
+/*     font-size: 1.04vw; */
+    font-size: 0.75vw;
+    line-height: 19px;
+    line-height: 0.98vw;
+    grid-area: kpi;
+
+    display: grid;
+    grid-template-areas: "capacity availability failures"
+                         "real_availability production opex"
+                         "performance extreme .";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 19px;
+    gap: 1.04vw;
+}
+/* .kpi-card > div > img {
+    width: 3.13vw;
+} */
+
+.kpi-card{
+    width: 246px;
+    width: 12.81vw;
+    height: 169px;
+    height: 15.65vh;
+    max-height: 170px;
+}
+
+/* .kpi-card > .card__face--front > p{
+    position:absolute;
+    bottom: 0;
+} */
+
+#kpi-capacity{
+    grid-area: capacity;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+#kpi-availability{
+    grid-area: availability;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+#kpi-failures{
+    grid-area: failures;
+    background: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+#kpi-real_availability{
+    grid-area: real_availability;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+#kpi-production{
+    grid-area: production;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+#kpi-opex{
+    grid-area: opex;
+    background: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+}
+
+#kpi-performance{
+    grid-area: performance;
+    display: flex;
+}
+
+#kpi-extreme_loads{
+    grid-area: extreme;
+    display: flex;
+}
+
+/* #kpi-extreme_loads .second-div{
+    margin-bottom: 10px;
+} */
+
+extreme_value{
+    position: relative;
+    bottom: -7px;
+}
+
+.extremes_0s{
+    text-align: center;
+    border-bottom: #070924;
+}
+
+#wtgs{
+    grid-area: wtgs;
+}
+
+#second-container > #content > .map-card{
+
+
+    border: 0.25px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px -4px 5px -1px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+}
+
+li{
+    list-style: none;
+}
+
+#second-container > #content > .map-card > #map-nav > ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#second-container > #content > .map-card > #map-nav > ul > li{
+    padding: 15px;
+}
+
+#wtgs-list{
+    display: flex;
+    gap: 26px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.wtg-card{
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    background: #FFFFFF;
+    border: 0.25px solid rgba(38, 40, 64, 0.2);
+    transition: box-shadow .3s;
+    /* box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+ */    
+    border-radius: 10px;
+    cursor: default;
+}
+
+.wtg-card:hover{
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+}
+
+.wtg-card > div:first-child > p:nth-child(2){
+    color: rgba(38, 40, 64, 0.6);
+}
+
+.wtg-card > div > .kpi{
+    background: #FDA872;
+    border-radius: 10px 0px;
+    padding: 1.04vw 1.04vw 1.04vw 1.06vw;
+}
+
+.wtg-card > div:first-child{
+    padding: 20px;
+}
+
+.wtg-card #cards-extremes{
+    display: flex;
+    gap: 0.3vw
+}
+
+.wtg-card #cards-extremes > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wtg-card > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.wtg-card > div:last-child > img {
+    position: absolute;
+    top: -14.98%;
+    right: -3%;
+    width: 57%;
+    height: 78%;
+}
+
+#second-container > #kpis_title{
+    display: flex;
+    justify-content: flex-end;
+/*     justify-content: space-around; */
+}
+
+#second-container > #kpis_title > span:first-child{
+    margin-right: 18%;
+}
+
+#second-container > #kpis_title > div{
+    margin-right: 3%;
+}
+
+.cardK {
+    position: relative;
+/*     color: white; */
+/*     transition: 1s ease-in-out; */
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+.cardK .card__face{
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+/*     transition: 1s ease-in-out; */
+}
+.cardK .card__face{
+    -o-object-fit: cover;
+        object-fit: cover;
+}
+
+.cardK .card__face--front{
+    transition: none;
+}
+
+
+.cardK .card__face--back {
+    position: absolute;
+    transform: rotateY(0.5turn);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.625vw;
+    line-height: 0.94vw;
+
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardK .card__face--back > div{
+    width: 10.73vw;
+    height: 11.57vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kpi-extreme_loads > .card__face--back > div{
+    display: block;
+}
+
+.cardK .card__face--front {
+    transform: rotateX(0deg);
+}
+
+@media only screen and (max-width: 1600px) {
+    .kpi-card{
+        width: 205px;
+        height: 130px;
+    }
+
+    .kpi-card > div > .second-div > div > img{
+        width: 50px !important;
+    }
+
+    .kpi-card .card__face.card__face--back > div > div > div > img{
+        width: 50px !important;
+    }
+
+    #kpi-opex{
+        gap: 19px !important;
+    }
+
+    .kpi-card > div > .second-div > img{
+        width: 49px !important;
+    }
+
+    #repairs-components > ul > ul > li > div > div > div{
+        margin-right: 30% !important;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/credentials.js" defer></script>
+    <script src="js/controller.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/hover-popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://api4.windy.com/assets/libBoot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="libraries/chartjs-plugin-zoom.js"></script>
+    <script src="libraries/chartjs-plugin-datalabels.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.3.1/chartjs-plugin-annotation.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAA2DTQojiJ2nsKEfdU4diREBSdUs7dlmQ&region=EN&language=EN"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link  rel="icon" href="images/nabla_favicon.svg" type="image/svg" />
+    <title>Nabla Analytics</title>
+</head>
+<body id="body">
+    <div id="menu">
+        <img src="images/mini-logo.svg" alt="">
+    </div>
+    <div id="main-container">
+        <div id="panel">
+            <div id="dashboards" class="fn-500 fs-20 panel-selected">
+                Dashboards
+            </div>
+            <div id="alerts" class="fn-500 fs-20">
+                Alerts
+            </div>
+<!--             <div id="indicators" class="fn-500 fs-20">
+                Indicators
+            </div>
+            <div id="search">
+                <input type="text" class="fn-500 fs-20">
+            </div> -->
+            <div id="profile">
+<!--                 Perfil -->
+                <img id="profile-img" src="" alt="">
+            </div>
+        </div>
+        <div id="panel-collapse">
+            <img id="logout-img" src="images/icons/arrow_logout.png" alt="">
+            Log out
+        </div>
+<!--         <div id="user-menu">
+            Logout
+        </div> -->
+        <div class="nav" id="windfarm-nav">
+            <ul>
+                <li class="fn-500 fs-20" id="portfolio">Portfolio</li>
+                <li class="fn-500 fs-20" id="overview">Overview</li>
+                <li class="fn-500 fs-20" id="fatigue">Fatigue</li>
+                <li class="fn-500 fs-20" id="performance">Performance</li>
+                <li class="fn-500 fs-20" id="extreme">Extreme</li>
+            </ul>
+        </div>
+        <div class="nav" id="wtg-nav">
+            <ul>
+                <li class="fn-500 fs-20" id="windfarm-back"><p>Wind farm</p>Overview</li>
+                <li class="fn-500 fs-20" id="overview"><p></p>Overview</li>
+                <li class="fn-500 fs-20" id="fatigue"><p></p>Fatigue</li>
+                <li class="fn-500 fs-20" id="performance"><p></p>Performance</li>
+                <li class="fn-500 fs-20" id="extreme"><p></p>Extreme</li>
+            </ul>
+        </div>
+        <div class="nav" id="alerts-nav">
+            <ul>
+                <li class="fn-500 fs-20" id="alerts-all">Active alerts</li>
+                <li class="fn-500 fs-20" id="alerts-pending">Pending</li>
+                <li class="fn-500 fs-20" id="alerts-solved">Solved</li>
+            </ul>
+        </div>
+        <div id="second-container">
+        </div>
+    </div>
+</body>
+</html>

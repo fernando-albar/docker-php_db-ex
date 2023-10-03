@@ -1,0 +1,127 @@
+#calc{
+  display: flex;
+  gap: 40px;
+}
+
+.range{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.range > div:first-child{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.range > button{
+/*   width: 40%; */
+  align-self: center;
+/*   margin-right: 40px; */
+}
+
+#second-line{
+  background-color: #262840;;
+}
+
+#second-container > #main-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+#title{
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+#wtg{
+font-size: 32px;
+line-height: 41px;
+}
+
+#wf{
+font-size: 32px;
+line-height: 41px;
+}
+
+#wf:hover{
+color: #777AA4 !important;
+cursor: default;
+}
+
+.wtg-info{
+    margin-bottom: 10px;
+}
+
+#content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.graph-legend > div{
+  column-gap: 10px;
+}
+
+#power{
+/*   height: 397px; */
+  width: 49%;
+}
+
+#power > div:first-child > div > p{
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;  
+  color: rgba(38, 40, 64, 0.6);
+}
+
+#rotor{
+/*   height: 397px; */
+  width: 49%;
+}
+
+#power-c{
+  display: none;
+/*   height: 397px;
+  width: 50%; */
+}
+
+#rotor-c{
+  display: none;
+/*   height: 397px;
+  width: 50%; */
+}
+
+#wsd-c{
+  display: none;
+/*   height: 397px;
+  width: 50%; */
+}
+
+#ws-c{
+  display: none;
+/*   height: 397px;
+  width: 50%; */
+}
+
+
+#mp-graph-wsDistribution{
+/*   height: 397px; */
+  width: 49%;
+}
+
+#mp-graph-windSpeed{
+/*   height: 397px; */
+  width: 49%;
+}
+
+canvas{
+  max-height: 400px !important;
+}

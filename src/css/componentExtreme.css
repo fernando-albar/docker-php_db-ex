@@ -1,0 +1,143 @@
+#wf-info{
+  color: rgba(38, 40, 64, 0.3);
+}
+
+#wtg, #component{
+  font-size: 32px;
+}
+
+#wf{
+  color: #BEBFC6;
+  cursor: default;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+
+#wf:hover{
+  color: #777AA4 !important;
+  cursor: default;
+}
+
+#calc{
+  display: flex;
+  gap: 40px;
+}
+
+.range{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: auto !important
+}
+
+.range > div:first-child{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.range > button{
+  align-self: flex-end;
+  position: relative;
+}
+
+#second-container > #main-title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#title{
+  margin-bottom: 10px;
+  margin-top: 25px;
+  line-height: 38px !important;
+  font-weight: 600 !important;
+}
+
+.wtg-info{
+    margin-bottom: 10px;
+}
+
+#content{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  column-gap: 1%;
+}
+
+#content > div{
+  width: 49.5%;
+}
+
+.card{
+  padding-top :30px;
+  padding-left: 13px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #262840;
+}
+
+.card h6{
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #262840;
+}
+
+
+
+
+
+
+.button__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+  transition: all 0.2s;
+}
+
+.button--loading .button__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button--loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 0.75s linear infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}

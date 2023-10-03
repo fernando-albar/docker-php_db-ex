@@ -1,0 +1,199 @@
+
+<div id="repairs">
+    <div class="card" id="repairs-wtgs">
+        <img id="repairs-close-btn" src="images/icons/x-close.svg"></img>
+        <p>WIND TURBINE GENERATORS</p>
+        <ul>
+        </ul>
+    </div>
+    <div class="card" id="repairs-components">
+        <div id="lessYearDateConfirmation" class="card">
+            <p>This component has been replaced in a period of less than 1 year. Life expectancy calculation needs at least 1 year of data, therefore standard 20-years lifespan basis (OEM certification) will be applied for this component's life calculation until 1 year of data has been gathered.</p> 
+            <div>            
+                <button id="confirm">Accept</button>
+                <button id="cancel">Cancel</button>
+            </div>
+        </div>
+        <img id="repairs-components-close-btn" src="images/icons/x-close.svg"></img>
+        <p id="wtg_number"></p>
+        <ul>
+            <ul id="Nacelle">
+                <p>Nacelle</p>
+            </ul>
+            <ul id="Hub">
+                <p>Hub</p>
+            </ul>
+            <ul id="Blade">
+                <p>Blade</p>
+            </ul>
+            <ul id="Tower">
+                <p>Tower</p>
+            </ul>
+            <ul id="Foundation">
+                <p>Foundation</p>
+            </ul>
+        </ul>
+    </div>
+</div>
+
+<div id="title">
+    <div>
+        <p id="wf"></p> 
+        <div id="wf-info">
+            <p id="model"></p>
+            <p id="cod"></p>
+        </div>
+    </div>
+    <select id="periods" class="periods-selector">
+        <option value="0">24h</option>
+        <option value="1">1M</option>
+        <option value="2">3M</option>
+        <option value="3">6M</option>
+        <option value="4">12M</option>
+    </select>
+    <button id="btn-repairs">
+        Replacements
+    </button>
+</div>
+<div id="kpis_title">
+    <span class="fn-700 fs-20 fh-26">GENERAL WIND FARM KPIs</span>
+    <div>
+<!--         <span class="fn-700 fs-20 fh-22">
+            GENERAL WTG KPIs 
+        </span>
+        <br> -->
+        <span class="fn-700 fs-20 fh-26">
+            FORECAST 2 YEARS
+        </span>
+    </div>
+</div>
+<div id="content">
+    <div class="map-card">
+        <div id="map-nav">
+            <ul>
+                <li id="fatigue_map">Fatigue</li>
+                <li id="performance_map">Performance</li>
+                <li id="extreme_map">Extreme</li>
+            </ul>
+        </div>
+        <div id='map' class="map">
+        </div>
+    </div>
+    <div id="kpi">
+        <div class="kpi-card cardK" id="kpi-capacity">
+            <div class="card__face card__face--front">
+                <div class="second-div">                  
+                    <img class="kpi-img" src="images/icons/molino_azul.svg" alt="">
+                    Total <br> Capacity
+                </div>
+                <p class="fn-700 fs-30 fh-48" id="power-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>wind farm total installed capacity</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-availability">
+            <div class="card__face card__face--front">
+                <div class="second-div">                     
+                    <img class="kpi-img" src="images/icons/reloj_naranja.svg" alt="">
+                    Average <br> Availability
+                </div>
+                <p class="fn-700 fs-30 fh-48" id="availability-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>mean value of WTGs availabilities across the wind farm</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-real_availability">
+            <div class="card__face card__face--front">
+                <div class="second-div">    
+                    <img class="kpi-img" src="images/icons/check_oscuro.svg" alt="">
+                    Real vs. Contract <br> Availability <br> Ratio
+                </div>
+                <p class="fn-700 fs-30 fh-48" id="availability-ratio-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>real availability percentage compared with contractual availability</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-production">
+            <div class="card__face card__face--front">
+                <div class="second-div">    
+                    <img class="kpi-img" src="images/icons/rayo.svg" alt="">
+                    Real <br> Production
+                </div>
+                <p class="fn-700 fs-30 fh-48" id="production-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>real production</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-performance">
+            <div class="card__face card__face--front">
+                <div class="second-div">    
+                    <img class="kpi-img" src="images/icons/arrow.svg" alt="">
+                    Real <br> Performance <br> Ratio
+                </div>
+                <p class="fn-700 fs-30 fh-48" id="performance-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>real production percentage (real PC, real availability, real wind) compared with theoretical contractual production (contractual PC, contractual availability, real wind)</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-extreme_loads">
+            <div class="card__face card__face--front">
+                <div class="second-div">    
+                    <img class="kpi-img" src="images/icons/wind_dark.svg" alt="">
+                    Extreme <br> Loads
+                </div>
+                <div class="fn-700 fs-30 extremes_0s second-div">
+                    <div><extreme_value id="extreme_1-kpis"></extreme_value> <img src="images/icons/extreme_amarillo_raya.svg" alt=""></div>
+                    <div><extreme_value id="extreme_2-kpis"></extreme_value> <img src="images/icons/extreme_orange_raya.svg" alt=""></div>
+                    <div><extreme_value id="extreme_3-kpis"></extreme_value> <img src="images/icons/extreme_red_raya.svg" alt=""></div> 
+                </div>
+            </div>
+            <div class="card__face card__face--back">
+                <div>
+                    counts how many components have been affected by extreme events
+                    <div class="extremes_0s second-div">
+                        <div><extreme_value id="extreme_1-kpis">>=70%</extreme_value> <img src="images/icons/extreme_amarillo_raya.svg" alt=""></div>
+                        <div><extreme_value id="extreme_2-kpis">>=85%</extreme_value> <img src="images/icons/extreme_orange_raya.svg" alt=""></div>
+                        <div><extreme_value id="extreme_3-kpis">>=100%</extreme_value> <img src="images/icons/extreme_red_raya.svg" alt=""></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-failures">
+            <div class="card__face card__face--front">
+                <div class="second-div">    
+                    <img class="kpi-img" src="images/icons/core_oscuro.svg" alt="">
+                    Short Term <br> Failures
+                </div>
+                <p class="fn-700 fs-30 fh-48" id="failures-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>counts the forecasted failures per component per wind turbine, at wind farm level in the coming 24 months</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-opex">
+            <div class="card__face card__face--front">
+                <div class="second-div">    
+                    <img class="kpi-img" src="images/icons/money62.svg" alt="">
+                    Short Term <br> Preventive <br> OPEX
+                </div>
+                <p class="fn-700 fs-30 fh-48" id="opex-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>counts the expenses in NDTs, and preventive actions recommended to mitigate or delay failures, per component, per wind turbine, at wind farm level in the coming 24 months</div>
+            </div>
+        </div>
+    </div>
+    <div id="wtgs">
+        <div>
+            <p class="fn-700 fs-30 fh-38">All wind turbines</p>
+            <p class="fn-500 fs-30 fh-38">Overview</p>
+        </div>
+        <div id="wtgs-list">
+        </div>
+    </div>
+</div>

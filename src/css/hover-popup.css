@@ -1,0 +1,74 @@
+:root {
+  /*   color variables */
+  --clr-primary: #6aeeb5;
+  --clr-primary-hover: #29e6a7;
+  --clr-primary-dark: #e0e0e0;
+  --clr-gray100: #f0f7f8;
+  --clr-gray200: #cfd8dc;
+
+  /*   border radius */
+  --radius: 0.2rem;
+}
+
+.hover-message {
+  font-size: 1em;
+  position: relative;
+  cursor: pointer;
+  text-decoration-color: var(--clr-primary);
+}
+
+.hover-message::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  font-size: .7em;
+  color: black;
+  background: white;
+  padding: .5em;
+  border-radius: var(--radius);
+  box-shadow: 0px 0px 10px var(--clr-gray200);
+  left: 0;
+  top: -100%;
+  clip-path: circle(0rem at center);
+  overflow: hidden;
+  transition: 300ms all ease-in;
+  width: -webkit-fill-available;
+}
+
+.hover-message:hover::before {
+  clip-path: circle(20rem at center);
+  top: -150%;
+}
+
+.hover-message-big {
+  font-size: 1em;
+  position: relative;
+  text-decoration-color: var(--clr-primary);
+}
+
+.hover-message-big::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  font-size: .7em;
+  color: black;
+  background: white;
+  padding: .5em;
+  border-radius: var(--radius);
+  box-shadow: 0px 0px 10px var(--clr-gray200);
+  left: 0;
+  top: -100%;
+  clip-path: circle(0rem at center);
+  overflow: hidden;
+  transition: 300ms all ease-in;
+/*   width: -webkit-fill-available; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #262840;
+  width: 200px;
+}
+
+.hover-message-big:hover::before {
+  clip-path: circle(20rem at center);
+  top: -18vh
+}

@@ -1,0 +1,244 @@
+#title{
+    margin-bottom: 2rem;
+    margin-top: 25px;
+}
+
+.table-content{
+    max-height: 55vh;
+    overflow: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px 0;
+}
+
+table thead{
+    position: sticky;
+    top: 0;
+    background: #F9F9F9;
+}
+
+table tbody{
+    background: #FDFDFD;
+}
+
+.tfoot{
+    position: sticky;
+    bottom: 0;
+    background: #F9F9F9;
+    display: flex;
+    padding: 0.8rem 1.7rem;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 10px 12px 0px #e3e3e3;
+}
+
+.tfoot p:last-child{
+    margin-left: 1rem;
+}
+
+table tbody tr:hover{
+    background: #E2E7FE;
+}
+
+table thead tr th{
+    padding: .8rem;
+}
+
+table tbody tr td{
+    padding: .4rem;
+}
+
+table thead tr th, table tbody tr td{
+    width: 10.444%;
+    text-align: center;
+}
+
+table thead tr th:first-child, table thead tr th:last-child, table tbody tr td:first-child, table tbody tr td:last-child{
+    width: 3%;
+}
+
+.divider td hr{
+    border-top: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.divider td{
+    height: min-content;
+    padding: 0;
+    color: #9394A0;
+}
+
+input[type="date"] {
+    border: none;
+    box-sizing: border-box;
+    outline: 0;
+    padding: .75rem;
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    width: max-content;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    right: 0%;
+    background-color: #ffffff;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+    line-height: normal;
+}
+
+.dropdown-content a:first-child {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem 0 1rem;
+}
+
+.dropdown-content a:last-child {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 0 1rem 0.5rem 1rem;
+}
+
+.dropdown-content a:hover {
+    background: #F9F9F9;
+}
+
+.dropdown a:hover {background-color: #E0E2F4;}
+
+.show {display: block;}
+
+.dd-btn, #alert-date-calendar{
+    background: #F5F3F3;
+    border-radius: 11.4114px;
+    text-align: center;
+    appearance: none;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22.5px;
+    padding: 9px;
+    cursor: pointer;
+
+    background: #FFFFFF;
+    border: 0.25px solid rgba(38, 40, 64, 0.2);
+    box-shadow: 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 10px;
+}
+
+.dd {
+    position: relative;
+    display: inline-block;
+}
+  
+.dd-content {
+    position: absolute;
+    background-color: #f1f1f1;
+    width: max-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding-bottom: 0.5rem;
+    max-height: 400px;
+    overflow: auto;
+    border-radius: 10px;
+
+    background: #FFFFFF;
+    border: 0.25px solid rgba(38, 40, 64, 0.2);
+    box-shadow: 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 10px;
+}
+
+.dd-content p{
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem 0 1rem;
+}
+
+.dd-content p:hover{
+    background-color: #E0E2F4;
+}
+
+.dd-content .select{
+    display: none;
+}
+
+.dd-content .selected .no-select{
+    display: none;
+}
+
+.dd-content .selected .select{
+    display: contents;
+}
+
+.refresh-dd, .fa-angle-right{
+    margin-left: 10px;
+    cursor: pointer;
+    display: inherit!important;
+}
+
+.fa-angle-right{
+    transition: transform .5s;
+}
+
+.fa-angle-right.show{
+    transform: rotate(90deg);
+}
+
+.fa-circle{
+    color: #B3B1B1;
+}
+
+.fa-regular::before{
+    margin-right: 6px;
+}
+
+.fa-solid::before{
+    margin-right: 6px;
+}
+
+.fa-plus{
+    color: #B3B1B1;
+}
+
+input[type='checkbox']{
+    width: 15px;
+    height: 15px;
+     
+    border: 2px solid #B3B1B1;
+}

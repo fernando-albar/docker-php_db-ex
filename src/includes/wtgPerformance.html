@@ -1,0 +1,140 @@
+<div id="main-title">
+<div id="title">
+    <div id="wtg"></div>
+    <div class="fn-500" id="wf" style="color: #BEBFC6;">                
+    </div>
+</div>
+<div id="calc">
+    
+<!--     <div class="range">
+        <div>
+            <span>1 Range</span>
+            <div class="line_box"></div>
+            <div class="inputs ">
+                <span class="calendar_vertical_line"></span>
+            </div>
+            <div class="inputs ">
+                <input id="mapg-startDate-first" type="date" class="calendar_box">
+                <input id="mapg-finalDate-first" type="date">
+            </div>
+        </div>
+        <button id="mapg-search-by-range-btn">Plot</button>
+        <button id="mapg-range-comparer-btn">Compare</button>
+    </div> -->
+
+    <div class="range">
+        <div>
+            <span>1 Range</span>
+            <div class="line_box"></div>
+            <div class="inputs ">
+                <span class="calendar_vertical_line"></span>
+            </div>
+            <div class="inputs">
+                <input id="mapg-startDate-first" type="date">
+                <input id="mapg-finalDate-first" type="date">
+            </div>
+        </div>
+        <button id="mapg-search-by-range-btn">Plot</button>
+    </div>
+
+    <div class="range">
+        <div>
+            <span>2 Range</span>
+            <div class="line_box"></div>
+            <div class="inputs ">
+                <span class="calendar_vertical_line" id="second-line"></span>
+            </div>
+            <div class="inputs">
+                <input id="mapg-startDate-second" type="date">
+                <input id="mapg-finalDate-second" type="date">
+            </div>
+        </div>
+        <button id="mapg-range-comparer-btn">Compare</button>
+    </div>
+</div>
+</div>
+<div id="content">
+
+<!-- <div id="power-c">
+    <div>
+        POWER CURVE
+        Air density corrected [1.225kg/m3]
+        <img src="img/icons/reload.svg" alt="">
+    </div>
+    <canvas id="power-curve-graph-comp">
+
+    </canvas>
+</div>
+<div id="rotor-c">
+    <div>
+        ANGULAR ROTOR SPEED
+        <img src="img/icons/reload.svg" alt="">
+    </div>
+    <canvas id="rotor-speed-graph-comp">
+
+    </canvas>
+</div>
+
+<div id="wsd-c">
+    <div>
+        POWER CURVE
+        Air density corrected [1.225kg/m3]
+        <img src="img/icons/reload.svg" alt="">
+    </div>
+    <canvas id="graph-mp-graph-wsDistribution-7-c">
+
+    </canvas>
+</div>
+<div id="ws-c">
+    <div>
+        ANGULAR ROTOR SPEED
+        <img src="img/icons/reload.svg" alt="">
+    </div>
+    <canvas id="graph-mp-graph-windSpeed-7-c">
+
+    </canvas>
+</div> -->
+
+<div id="power" class="card graph">
+    <div>
+        <div>            
+            POWER CURVE
+            <p>AIR DENSITY CORRECTED [1.225Kg/m3]</p>
+        </div>
+        <div class="reload-graph" id="power-graph-reset"></div>
+    </div>
+    <canvas id="power-graph">
+
+    </canvas>
+</div>
+<div id="rotor" class="card graph">
+    <div>
+        ANGULAR ROTOR SPEED
+        <div class="reload-graph" id="rotorSpeed-graph-reset"></div>
+    </div>
+    <canvas id="rotorSpeed-graph">
+
+    </canvas>
+</div>
+<div id="mp-graph-wsDistribution" class="card graph">
+    <div>
+        WIND SPEED DISTRIBUTION
+    </div>
+    <canvas id="wsDistribution-graph">
+
+    </canvas>
+</div>
+<div id="mp-graph-windSpeed" class="card graph">
+    <div>
+        WIND SPEED 
+        <div id="windSpeed-graph-reset" class="reload-graph"></div>
+    </div>
+    <canvas id="windSpeed-graph">
+
+    </canvas>
+</div>
+<div>
+    
+</div>
+</div>
+

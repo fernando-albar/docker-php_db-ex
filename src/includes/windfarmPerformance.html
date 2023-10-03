@@ -1,0 +1,90 @@
+<div class="loading-container wrap text-center d-flex align-center">
+    <div>
+        <img src="images/loader_final.gif">
+    </div>
+</div>
+
+<div id="title" style="display: none;">
+    <div>
+        <span id="wf"></span>
+        <h9 class="fn-500 fh-38 fs-30" style="color: #BEBFC6;">Performance</h9>
+    </div>
+    <div>                
+        <select id="periods" class="periods-selector">
+            <option value="0">24h</option>
+            <option value="1">1M</option>
+            <option value="2">3M</option>
+            <option value="3">6M</option>
+            <option value="4">12M</option>
+        </select>
+    </div>
+</div>
+<div id="content" style="display: none;">
+    <div id="table">
+        <table id="performance-table" class="text-center">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="subview">
+        <div id="power" class="card graph">
+            <div>
+                <div>            
+                    POWER CURVE
+                    <p>AIR DENSITY CORRECTED [1.225Kg/m3]</p>
+                </div>
+                <div class="nav-graph">
+                    <div id="power-curve-reset" class="reload-graph">
+                    </div>
+                    <select id="periods_power" class="periods-selector">
+                        <option value="0">24h</option>
+                        <option value="1">1M</option>
+                        <option value="2">3M</option>
+                        <option value="3">6M</option>
+                        <option value="4">12M</option>
+                    </select>
+                </div>
+            </div>
+            <canvas id="power-curve-graph">
+
+            </canvas>
+        </div>
+        <div id="rotor" class="card graph">
+            <div>
+                ANGULAR ROTOR SPEED
+                <div class="nav-graph">
+                    <div id="rotor-speed-reset" class="reload-graph">
+                    </div>
+                    <select id="periods_rotor" class="periods-selector">
+                        <option value="0">24h</option>
+                        <option value="1">1M</option>
+                        <option value="2">3M</option>
+                        <option value="3">6M</option>
+                        <option value="4">12M</option>
+                    </select>
+                </div>
+            </div>
+            <canvas id="rotor-speed-graph">
+
+            </canvas>
+        </div>
+        <div id="real" class="card graph">
+            <div>
+                REAL POWER OUTPUT
+                <select id="periods_real" class="periods-selector">
+                    <option value="0">24h</option>
+                    <option value="1">1M</option>
+                    <option value="2">3M</option>
+                    <option value="3">6M</option>
+                    <option value="4">12M</option>
+                </select>
+            </div>
+            <canvas id="energy-production-graph">
+
+            </canvas>
+        </div>
+    </div>
+</div>
+

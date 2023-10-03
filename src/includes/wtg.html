@@ -1,0 +1,308 @@
+<div class="component-opex-container">
+    <div class="card">
+        <div class="card-header p-1 modal_header">
+            <img id="component-close-btn" src="images/icons/x-close.svg"></img>
+            <h6 class="big_title"></h6>
+        </div>
+        <div class="card-body p-1">
+            <div class="preventives w-100 text-center"></div>
+<!--             <div class="pt-1">
+                <button class="btn btn-primary f-right">Activate management plan</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<div id="title">
+    <p class="fh-38">
+        <span id="wtg"></span>
+        <br>
+        <div>
+            <h9 class="fn-500" style="color: #BEBFC6;" id="wf"></h9>
+            <select id="periods" class="periods-selector">
+                <option value="0">24h</option>
+                <option value="1">1M</option>
+                <option value="2">3M</option>
+                <option value="3">6M</option>
+                <option value="4">12M</option>
+            </select>
+        </div>
+
+    </p>
+<!--     <img src="images/icons/24h.svg" alt=""> -->
+</div>
+<div id="kpis_title">
+    <span class="kpi-title">
+        GENERAL Wind turbine generate KPIs  
+    </span>
+</div>
+<div id="content">
+    <div id="wtg-info" class="card">
+        <div id="component-img">
+            <img src="images/aero2.png" alt="">
+        </div>
+        <div id="model-twr-cod">
+            <p><b>Turbine Model: </b><span id="turbine_model"></span></p>
+            <p><b>TWR: </b><span id="twr"></span></p>
+            <P><b>COD [year]: </b><span id="startup"></span></P>
+        </div>
+        <div id="ttf">
+
+        </div>
+    </div>
+    <div id="ttf-table" class="card">       
+        <table id="components-table">
+            <thead>
+                <tr class="fn-700 fs fh-22">
+                    <th class="table-head-firts-th">Component</th>
+                    <th>NDT <br> [years]</th>
+                    <th>Preventive <br> [years]</th>
+                    <th>Failure <br> [years]</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="kpi">
+        <div class="kpi-card cardK" id="kpi-capacity">
+            <div class="card__face card__face--front">
+                <div class="second-div">      
+                    <img class="kpi-img" src="images/icons/molino_azul2.svg" alt="">
+                    Rated
+                    <br>
+                    Power
+                </div>
+                <p class="fn-700 fs-30" id="power-kpis"></p>
+            </div>
+            <div class="card__face card__face--back" style="font-style: normal;">
+                <div>as per OEMs specifications</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-availability">
+            <div class="card__face card__face--front">
+                <div class="second-div">                
+                    <img class="kpi-img" src="images/icons/reloj_naranja2.svg" alt="">
+                    Average 
+                    <br>
+                    Availability
+                </div>
+                <p class="fn-700 fs-30" id="availability-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>mean value of WTGs availabilities across the wind farm</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-real_availability">
+            <div class="card__face card__face--front">
+                <div class="second-div"> 
+                    <img class="kpi-img" src="images/icons/check_oscuro2.svg" alt="">
+                    Real vs. Contract <br> Availability <br> Ratio
+                </div>
+                <p class="fn-700 fs-30" id="availability-ratio-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>real availability percentage compared with contractual availability</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-production">
+            <div class="card__face card__face--front">
+                <div class="second-div"> 
+                    <img class="kpi-img" src="images/icons/rayo2.svg" alt="">
+                    Real
+                    <br>
+                    Production
+                </div>
+                <p class="fn-700 fs-30" id="production-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>real production</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-performance">
+            <div class="card__face card__face--front">
+                <div class="second-div"> 
+                    <img class="kpi-img" src="images/icons/performance.svg" alt="">
+                    Real 
+                    <br>
+                    Performance 
+                    <br>
+                    Ratio
+                </div>
+                <p class="fn-700 fs-30" id="performance-kpis"></p>
+            </div>
+            <div class="card__face card__face--back">
+                <div>real production percentage (real PC, real availability, real wind) compared with theoretical contractual production (contractual PC, contractual availability, real wind)</div>
+            </div>
+        </div>
+        <div class="kpi-card cardK" id="kpi-extreme_loads">
+            <div class="card__face card__face--front">
+                <div class="second-div"> 
+                    <img class="kpi-img" src="images/icons/extreme_loads2.svg" alt="">
+                    Extreme 
+                    <br>
+                    Loads
+                </div>
+                <div class="fn-700 fs-30 extremes_0s second-div">
+                    <div><extreme_value id="extreme_1-kpis"></extreme_value> <img src="images/icons/extreme_amarillo_raya.svg" alt=""></div>
+                    <div><extreme_value id="extreme_2-kpis"></extreme_value> <img src="images/icons/extreme_orange_raya.svg" alt=""></div>
+                    <div><extreme_value id="extreme_3-kpis"></extreme_value> <img src="images/icons/extreme_red_raya.svg" alt=""></div> 
+                </div>
+            </div>
+            <div class="card__face card__face--back">
+                <div>
+                    counts how many components have been affected by extreme events
+                    <div class="extremes_0s second-div">
+                        <div><extreme_value id="extreme_1-kpis">>=70%</extreme_value> <img src="images/icons/extreme_amarillo_raya.svg" alt=""></div>
+                        <div><extreme_value id="extreme_2-kpis">>=85%</extreme_value> <img src="images/icons/extreme_orange_raya.svg" alt=""></div>
+                        <div><extreme_value id="extreme_3-kpis">>=100%</extreme_value> <img src="images/icons/extreme_red_raya.svg" alt=""></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="forecast">
+            <div id="forecast-title" class="kpi-title">FORECAST 2 YEARS</div>
+            <div id="forecast2">
+                <div class="kpi-card cardK" id="kpi-failures">
+                    <div class="card__face card__face--front">
+                        <div class="second-div"> 
+                            <img class="kpi-img" src="images/icons/core_oscuro2.svg" alt="">
+                            Short 
+                            Term 
+                            <br> 
+                            Failures
+                        </div>
+                        <p class="fn-700 fs-30" id="failures-kpis"></p>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div>counts the forecasted failures per component per wind turbine in the coming 24 month</div>
+                    </div>
+                </div>
+                <div class="kpi-card cardK" id="kpi-opex">
+                    <div class="card__face card__face--front">
+                        <div class="second-div"> 
+                            <img class="kpi-img" src="images/icons/money50.svg" alt="">
+                            Short 
+                            Term 
+                            <br>
+                            Preventive
+                            <br> 
+                            OPEX
+                        </div>
+                        <p class="fn-700 fs-30" id="opex-kpis"></p>
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div>counts the expenses in NDTs, and preventive actions recommended to mitigate or delay failures, per component, per wind turbine in the coming 24 months</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="subview">
+    <div id="lifespan">
+        <div class="h1">
+            TOTAL LIFESPAN
+            <br>
+                PER COMPONENT
+        </div>
+        <div id="lifespan-table">
+            <table id="life-components-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Life [years]</th>
+                    </tr>
+                </thead>
+                <tbody>
+<!--                     <tr><td>Yaw Bearing</td><td>21</td></tr>
+                    <tr><td>Yaw Bearing Supports</td><td>22</td></tr>
+                    <tr><td>Main Bearing</td><td>34</td></tr>
+                    <tr><td>Main Bearing Supports</td><td>24</td></tr>
+                    <tr><td>Main Frame</td><td>24</td></tr>
+                    <tr><td>Main Shaft</td><td>33</td></tr>
+                    <tr><td>Mounting</td><td>33</td></tr>
+                    <tr><td>Pitch Actuators</td><td>25</td></tr>
+                    <tr><td>Pitch Bearing</td><td>27</td></tr>
+                    <tr><td>Hub</td><td>33</td></tr>
+                    <tr><td>Blade</td><td id="bld_00_l">16</td></tr>
+                    <tr><td>Gearbox</td><td>34</td></tr>
+                    <tr><td>Tower</td><td id="twr_01_l">39</td></tr>
+                    <tr><td>Foundation</td><td>40</td></tr>
+                </tbody> -->
+            </table>
+            <!-- <p>* This component has been replaced in a recent period of less than one year. Calculation of life expectancy with a data period of less than one year is considered to have too much uncertainty. Therefore, the life expectancy of 20 years shown for this component for the one-year period following replacement corresponds to the design life offered by the OEM.</p>
+ -->        </div>
+    </div>
+    <div id="extremes">
+        <div class="h1">
+            EXTREME LOADS
+            
+            <select id="periods_extreme" class="periods-selector">
+                <option value="0">24h</option>
+                <option value="1">1M</option>
+                <option value="2">3M</option>
+                <option value="3">6M</option>
+                <option value="4">12M</option>
+            </select>
+        </div>
+        <div id="extreme-table">
+            <table id="extreme-components-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Positive [%]</th>
+                        <th class="table-divider">Negative [%]</th>
+                        <th class="th1-left">Component</th>
+                        <th>Positive [%]</th>
+                        <th>Negative [%]</th>
+                    </tr>
+                </thead>
+                <tbody>
+<!--                     <tr><td>Yaw Bearing</td><td class="c-green">43</td><td class="table-divider c-green">5</td>
+                    <td class="table-divider2">Yaw Bearing Supports</td><td class="c-green">43</td><td class="c-green">-</td></tr>
+                    <tr><td>Main Bearing</td><td class="c-green">54</td><td class="table-divider c-green">0</td><td class="table-divider2">Main Bearing Supports</td><td class="c-green">15</td><td class="c-green">10</td></tr><tr><td>Main Frame</td><td class="c-green">15</td><td class="table-divider c-green">10</td><td class="table-divider2">Main Shaft</td><td class="c-green">54</td><td class="c-green">0</td></tr><tr><td>Mounting</td><td class="c-green">58</td><td class="table-divider c-green">0</td><td class="table-divider2">Pitch Actuators</td><td class="c-green">18</td><td class="c-green">14</td></tr><tr><td>Pitch Bearing</td><td class="c-green">18</td><td class="table-divider c-green">14</td><td class="table-divider2">Hub</td><td class="c-green">22</td><td class="c-green">15</td></tr><tr><td>Blade</td><td id="bld_00_ep" class="c-green">63</td><td id="bld_00_en" class="table-divider c-green">58</td><td class="table-divider2">Gearbox</td><td class="c-green">50</td><td class="c-green">0</td></tr><tr><td>Tower</td><td id="twr_01_ep" class="c-green">43</td><td id="twr_01_en" class="table-divider c-green">-</td><td class="table-divider2">Foundation</td><td class="c-green">42</td><td class="c-green">-</td></tr>
+                 --></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="power" class="card graph">
+        <div>
+            <div>            
+                POWER CURVE
+                <p>Air density corrected [1.225Kg/m3]</p>
+            </div>
+            <div>
+                <div id="power-reset" class="reload-graph"></div>
+                <select id="periods_power" class="periods-selector">
+                    <option value="0">24h</option>
+                    <option value="1">1M</option>
+                    <option value="2">3M</option>
+                    <option value="3">6M</option>
+                    <option value="4">12M</option>
+                </select>
+            </div>
+        </div>
+        <canvas id="power-curve-graph">
+
+        </canvas>
+    </div>
+    <div id="rotor" class="card graph">
+        <div>
+            ANGULAR ROTOR SPEED
+            <div>
+                <div id="rotor-reset" class="reload-graph"></div>
+                <select id="periods_rotor" class="periods-selector">
+                    <option value="0">24h</option>
+                    <option value="1">1M</option>
+                    <option value="2">3M</option>
+                    <option value="3">6M</option>
+                    <option value="4">12M</option>
+                </select>
+            </div>
+
+        </div>
+        <canvas id="rotor-speed-graph">
+
+        </canvas>
+    </div>
+</div>
